@@ -8,7 +8,7 @@ plugins {
     java
     checkstyle
 }
-project.extra["GithubUrl"] = "https://github.com/dogPlugins/plugins"
+project.extra["GithubUrl"] = "https://github.com/dogPlugins/plugins-source"
 apply<BootstrapPlugin>()
 //apply<BootstrapPluginMerge>()
 
@@ -104,14 +104,14 @@ subprojects {
             options.encoding = "UTF-8"
         }
 
-        /*withType<Jar> {
+        withType<Jar> {
             doLast {
                 copy {
                     from("./build/libs/")
                     into("../release/")
                 }
             }
-        }*/
+        }
 
         withType<AbstractArchiveTask> {
             isPreserveFileTimestamps = false

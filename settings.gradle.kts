@@ -1,5 +1,7 @@
 rootProject.name = "Free Dog plugins"
 include(":oneclickblackjack")
+//include(":zulrahswapper")
+include(":oneclickcooking")
 
 
 
