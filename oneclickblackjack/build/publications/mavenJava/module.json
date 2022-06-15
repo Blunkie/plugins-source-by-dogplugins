@@ -1,0 +1,60 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "com.openosrs.externals",
+    "module": "oneclickblackjack",
+    "version": "1.0.1",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "7.4"
+    }
+  },
+  "variants": [
+    {
+      "name": "apiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 11,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api"
+      },
+      "files": [
+        {
+          "name": "oneclickblackjack-1.0.1.jar",
+          "url": "oneclickblackjack-1.0.1.jar",
+          "size": 7237,
+          "sha512": "9a3b2622fa67f5d9aec9ec47164281eb35e61a894456afe3b4b43dd07b28147afd6ba50247608ea6165909ec9208c68925d6cb5591930f08ba928d241320884b",
+          "sha256": "76c011c17f9e0029706d60e3d733c071bff9aae92345d26727cbbe808790d704",
+          "sha1": "45182e1a0a2fa55e910bfa1f0b05eff473987331",
+          "md5": "7014b2c3a9533c43a0a96a67f7aa106d"
+        }
+      ]
+    },
+    {
+      "name": "runtimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 11,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "oneclickblackjack-1.0.1.jar",
+          "url": "oneclickblackjack-1.0.1.jar",
+          "size": 7237,
+          "sha512": "9a3b2622fa67f5d9aec9ec47164281eb35e61a894456afe3b4b43dd07b28147afd6ba50247608ea6165909ec9208c68925d6cb5591930f08ba928d241320884b",
+          "sha256": "76c011c17f9e0029706d60e3d733c071bff9aae92345d26727cbbe808790d704",
+          "sha1": "45182e1a0a2fa55e910bfa1f0b05eff473987331",
+          "md5": "7014b2c3a9533c43a0a96a67f7aa106d"
+        }
+      ]
+    }
+  ]
+}
