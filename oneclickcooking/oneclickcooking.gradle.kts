@@ -27,8 +27,8 @@ import ProjectVersions.rlVersion
 
 version = "1.0.1"
 
-project.extra["PluginName"] = "One click blackjack"
-project.extra["PluginDescription"] = "One click blackjack"
+project.extra["PluginName"] = "One click Cooking"
+project.extra["PluginDescription"] = "One click Cooking"
 project.extra["PluginProvider"] = "Dog"
 project.extra["ProjectSupportUrl"] = "https://github.com/dogPlugins/plugins"
 dependencies {
