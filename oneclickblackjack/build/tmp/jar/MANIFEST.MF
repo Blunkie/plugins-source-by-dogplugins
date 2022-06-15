@@ -1,7 +1,0 @@
-Manifest-Version: 1.0
-Plugin-Version: 1.0.1
-Plugin-Id: oneclickblackjack-plugin
-Plugin-Provider: Dog
-Plugin-Description: One click blackjack
-Plugin-License: 3-Clause BSD License
-
