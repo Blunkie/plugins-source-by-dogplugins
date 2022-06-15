@@ -10,7 +10,6 @@ plugins {
 }
 project.extra["GithubUrl"] = "https://github.com/dogPlugins/plugins-source"
 apply<BootstrapPlugin>()
-//apply<BootstrapPluginMerge>()
 
 allprojects {
     group = "com.openosrs"
