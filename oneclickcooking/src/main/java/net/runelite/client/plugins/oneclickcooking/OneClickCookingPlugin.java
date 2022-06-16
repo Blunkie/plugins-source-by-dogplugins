@@ -66,13 +66,7 @@ import java.util.stream.Collectors;
 
 public class OneClickCookingPlugin extends Plugin {
 	@Inject
-	private Notifier notifier;
-
-	@Inject
 	private OneClickUtils utils;
-
-	@Inject
-	private ItemManager itemManager;
 
 	@Inject
 	private Client client;
@@ -104,34 +98,29 @@ public class OneClickCookingPlugin extends Plugin {
 	}
 
 	@Subscribe
-	private void onGameTick(GameTick event) {
-
-	}
-
-
-	@Subscribe
-	private void onChatMessage(ChatMessage event) {
-
-	}
-
-	@Subscribe
 	private void handleClick(MenuOptionClicked event) {
 		MenuEntry me = null;
-		if(utils.getEmptySlots() == 28 || utils.getInventoryItem(3142) == null){ // banking
+		if(utils.getEmptySlots() == 28 || utils.getInventoryItem(config.foodID()) == null){ // banking
 			me = utils.gameObjectMES(21301,MenuAction.GAME_OBJECT_FIRST_OPTION);
 		}
-		if(utils.bankOpen() && utils.getInventoryItem(3142) == null) {
-			me = utils.depositItems(2,MenuAction.CC_OP,5,983043,false);
+		if(utils.bankOpen() && utils.getInventoryItem(config.foodID()) == null) {
+			me = utils.createMenuEntry(1,MenuAction.CC_OP,-1,786474,false);
 		}
 		if(utils.bankOpen() && utils.getEmptySlots() == 28){
-			me = utils.withdrawItems(1,MenuAction.CC_OP,utils.getBankIndex(3142),WidgetInfo.BANK_ITEM_CONTAINER.getId(),false);
+			me = utils.withdrawItems(1,MenuAction.CC_OP,utils.getBankIndex(config.foodID()),WidgetInfo.BANK_ITEM_CONTAINER.getId(),false);
 		}
-		if(utils.bankOpen() && utils.getInventoryItem(3142) != null){
+		if(utils.bankOpen() && utils.getInventoryItem(config.foodID()) != null){
 			me = utils.gameObjectMES(21302,MenuAction.GAME_OBJECT_FIRST_OPTION);
 		}
-		if(client.getWidget(270,1) != null){
+		if(client.getWidget(270,1) != null) {
 			// 17694735 is id of 270.15 widget
-			me = utils.createMenuEntry(1,MenuAction.CC_OP,-1,17694735,false);
+			if (config.foodID() == 3142) {
+				me = utils.createMenuEntry(1, MenuAction.CC_OP, -1, 17694735, false);
+
+			} else {
+				me = utils.createMenuEntry(1, MenuAction.CC_OP, -1, 17694734, false);
+
+			}
 		}
 
 		if(me != null) {

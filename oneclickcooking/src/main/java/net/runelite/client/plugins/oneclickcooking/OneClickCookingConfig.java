@@ -31,5 +31,13 @@ import net.runelite.client.config.Range;
 @ConfigGroup("oneclickcooking")
 public interface OneClickCookingConfig extends Config
 {
+    @ConfigItem(
+            keyName = "ChooseId",
+            name="Raw food id",
+            description = "What food you want to cook (raw id in the input)",
+            position =  0
+
+    )
+    default int foodID(){return 3142;}
 
 }
